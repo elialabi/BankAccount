@@ -1,14 +1,25 @@
 import org.example.BankAccount;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.util.Calendar;
-
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
-
 public class BankAccountTest {
-    public static void main(String[] args) {
-//        Testing
+
+    //        Testing the getters and setters
+   private BankAccount bankAccount;
+    @BeforeEach
+    public void setup(){ bankAccount = new BankAccount;}
+    @Test
+    public void correctFirstName() {
+        BankAccount bankAccount = new BankAccount();
+        String expected = bankAccount.fullNameAccount();
+        String actual = "This is ElizabethAlabi";
+        assertThat(actual).isEqualTo(expected);
+
+        }
+
+
     }
 
-}
 
+//Cannot run test

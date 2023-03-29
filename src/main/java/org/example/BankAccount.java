@@ -1,69 +1,64 @@
 package org.example;
 
-import org.w3c.dom.ls.LSOutput;
-
-import java.time.LocalDate;
 
 public class BankAccount {
 
     private String firstName;
     private String lastName;
-    private LocalDate dateOfBirth;
+    private String dateOfBirth;
     private int accountNumber;
-    private int balance;
+    public double balance;
 
-//Construction
-    public BankAccount(String inputFirstName, String inputLastname,
-                       String inputDob, int inputAccountnumber, int inputBalance){
-
-        this.firstName = inputFirstName;
-        this.lastName = inputLastname;
-        this.accountNumber = inputAccountnumber;
-        this.balance = inputBalance;
+    public BankAccount(String firstName, String lastName, String dateOfBirth , int accountNumber, double balance) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.dateOfBirth = dateOfBirth;
+        this.accountNumber = accountNumber;
+        this.balance = balance;
 
 
 
     }
-//Getter and Setter
-    public String getFirstName() {
-        return firstName;
-    }
-    public String getLastname() {
-            return lastName;
-        }
-    public int getAccount() {
-        return accountNumber;
-
-    public double getBalance() {
-        return balance;
-
-        }
+    public String fullNameAccount(){
+        return "This is " + firstName + lastName ;
 
     }
 
+     public void deposit(double amount) {
+        balance += amount;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+     }
+     public void withdrawl(double amount) {
+         balance -= amount;
+//
+//         public void payInterest(double interestRate){
+//                    double interest = balance* rate;
+//                     balance+= interest;
+         }
     }
 
 
-    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
