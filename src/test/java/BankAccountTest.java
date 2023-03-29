@@ -10,7 +10,7 @@ public class BankAccountTest {
     @BeforeEach
     public void setup(){ bankAccount = new BankAccount;}
     @Test
-    public void correctFirstName() {
+    public void correctFullgName() {
         BankAccount bankAccount = new BankAccount();
         String expected = bankAccount.fullNameAccount();
         String actual = "This is ElizabethAlabi";
